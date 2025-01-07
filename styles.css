@@ -41,6 +41,37 @@
     backdrop-filter: blur(5px);
 }
 
+[data-theme="dark"] .project-details {
+    background-color: var(--background-color);
+}
+
+[data-theme="dark"] .project-section {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .tech-list,
+[data-theme="dark"] .features-grid {
+    gap: 2rem;
+}
+
+[data-theme="dark"] .tech-category,
+[data-theme="dark"] .feature {
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .project-tech span {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
 [data-theme="dark"] a {
     color: var(--primary-color);
 }
