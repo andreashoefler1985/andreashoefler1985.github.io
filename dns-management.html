@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Management System - Projektdetails</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-sun sun"></i>
+        <i class="fas fa-moon moon"></i>
+    </button>
+
+    <header>
+        <nav>
+            <div class="nav-content">
+                <a href="index.html">Zurück zum Portfolio</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>DNS Management System</h1>
+                <p>Eine skalierbare AWS-basierte DNS-Verwaltungslösung</p>
+            </div>
+        </section>
+
+        <section class="project-details">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Projektübersicht</h2>
+                    <p>Das DNS Management System ist eine umfassende Lösung zur Verwaltung von DNS-Infrastruktur, entwickelt mit modernen Cloud-Technologien und Best Practices für Hochverfügbarkeit und Skalierbarkeit.</p>
+                </div>
+
+                <div class="project-section">
+                    <h2>Technologie-Stack</h2>
+                    <div class="tech-list">
+                        <div class="tech-category">
+                            <h3>Frontend</h3>
+                            <ul>
+                                <li>React mit TypeScript</li>
+                                <li>Tailwind CSS</li>
+                                <li>Vite als Build-Tool</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>Backend</h3>
+                            <ul>
+                                <li>Node.js mit TypeScript</li>
+                                <li>Express.js Framework</li>
+                                <li>PostgreSQL Datenbank</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>AWS-Infrastruktur</h3>
+                            <ul>
+                                <li>Multi-AZ Deployment</li>
+                                <li>ECS für Container-Orchestrierung</li>
+                                <li>RDS für Datenbanken</li>
+                                <li>CloudFront CDN</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h2>Kernfunktionen</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <h3>DNS-Verwaltung</h3>
+                            <ul>
+                                <li>Zonen- und Record-Management</li>
+                                <li>Multi-Provider-Unterstützung</li>
+                                <li>Automatische Validierung</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <h3>Monitoring</h3>
+                            <ul>
+                                <li>Health Checks</li>
+                                <li>Performance-Überwachung</li>
+                                <li>Automatische Benachrichtigungen</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <h3>Sicherheit</h3>
+                            <ul>
+                                <li>Rollenbasierte Zugriffskontrolle</li>
+                                <li>Audit-Logging</li>
+                                <li>SSL/TLS-Verschlüsselung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h2>Architektur-Highlights</h2>
+                    <ul class="architecture-points">
+                        <li>
+                            <strong>Hochverfügbarkeit:</strong> 
+                            Multi-AZ Deployment mit automatischer Failover-Funktionalität
+                        </li>
+                        <li>
+                            <strong>Skalierbarkeit:</strong>
+                            Automatische Skalierung basierend auf Auslastung und Performance-Metriken
+                        </li>
+                        <li>
+                            <strong>Microservices:</strong>
+                            Container-basierte Architektur für bessere Wartbarkeit und Deployment-Flexibilität
+                        </li>
+                        <li>
+                            <strong>CI/CD:</strong>
+                            Vollautomatisierte Deployment-Pipeline mit umfangreichen Tests
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Theme beim Laden wiederherstellen
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Andreas Höfler | <a href="impressum.html" style="color: white; text-decoration: none;">Impressum</a></p>
+        </div>
+    </footer>
+</body>
+</html>

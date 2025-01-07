@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-sun sun"></i>
+        <i class="fas fa-moon moon"></i>
+    </button>
+
+    <header>
+        <nav>
+            <div class="nav-content">
+                <a href="index.html">Zurück zum Portfolio</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Impressum</h1>
+                <p>Rechtliche Informationen</p>
+            </div>
+        </section>
+
+        <section class="impressum">
+            <div class="container">
+                <div class="impressum-section">
+                    <h2>Unternehmensangaben</h2>
+                    <p>Andreas Höfler</p>
+                    <p>Webentwicklung</p>
+                </div>
+
+                <div class="impressum-section">
+                    <h2>Kontakt</h2>
+                    <ul class="contact-list">
+                        <li>Telefon: +43(0)720-317724</li>
+                        <li>Mobil: +43(0)660-6666370</li>
+                        <li>E-Mail: office@hoefler-it.at</li>
+                        <li>Web: <a href="https://hoefler-it.at" target="_blank">https://hoefler-it.at</a></li>
+                    </ul>
+                </div>
+
+                <div class="impressum-section">
+                    <h2>Rechtliche Informationen</h2>
+                    <p>UID-Nummer: ATU80920229</p>
+                    <p>Aufsichtsbehörde (gem. ECG): Bezirkshauptmannschaft Schärding</p>
+                </div>
+
+                <div class="impressum-section">
+                    <h2>Rechtliche Grundlagen</h2>
+                    <p>Anwendbare Rechtsvorschriften:</p>
+                    <p><a href="https://www.ris.bka.gv.at/" target="_blank">https://www.ris.bka.gv.at/</a></p>
+                </div>
+
+                <div class="impressum-section">
+                    <h2>Streitschlichtung</h2>
+                    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:</p>
+                    <p><a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Theme beim Laden wiederherstellen
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Andreas Höfler | <a href="impressum.html" style="color: white; text-decoration: none;">Impressum</a></p>
+        </div>
+    </footer>
+</body>
+</html>

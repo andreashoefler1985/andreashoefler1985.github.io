@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synkross - Projektdetails</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-sun sun"></i>
+        <i class="fas fa-moon moon"></i>
+    </button>
+
+    <header>
+        <nav>
+            <div class="nav-content">
+                <a href="index.html">Zurück zum Portfolio</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Synkross</h1>
+                <p>Cloud Storage Synchronisation und IMAP Migration als SaaS-Lösung</p>
+            </div>
+        </section>
+
+        <section class="project-details">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Projektübersicht</h2>
+                    <p>Synkross ist eine umfassende SaaS-Plattform, die Cloud-Storage-Synchronisation und IMAP-E-Mail-Migration kombiniert. Die Lösung ermöglicht Unternehmen eine nahtlose Verwaltung ihrer Cloud-Speicher und E-Mail-Migration mit fortschrittlichem Job-Management und Echtzeit-Überwachung.</p>
+                </div>
+
+                <div class="project-section">
+                    <h2>Technologie-Stack</h2>
+                    <div class="tech-list">
+                        <div class="tech-category">
+                            <h3>Frontend</h3>
+                            <ul>
+                                <li>React mit TypeScript</li>
+                                <li>Vite Build System</li>
+                                <li>Material UI Components</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>Backend</h3>
+                            <ul>
+                                <li>Node.js mit TypeScript</li>
+                                <li>Express.js Framework</li>
+                                <li>TypeORM für Datenbankzugriff</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>Cloud & DevOps</h3>
+                            <ul>
+                                <li>AWS-Infrastruktur</li>
+                                <li>Terraform IaC</li>
+                                <li>Docker Container</li>
+                                <li>CI/CD mit GitHub Actions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h2>Kernfunktionen</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <h3>Cloud Storage</h3>
+                            <ul>
+                                <li>Multi-Cloud Support (AWS S3, GCP, Azure, Dropbox)</li>
+                                <li>Automatische Synchronisation</li>
+                                <li>Versionierung und Backup</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <h3>IMAP Migration</h3>
+                            <ul>
+                                <li>E-Mail-Server Migration</li>
+                                <li>Fortschrittsverfolgung</li>
+                                <li>Fehlerbehandlung und Wiederaufnahme</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <h3>Administration</h3>
+                            <ul>
+                                <li>Benutzerverwaltung</li>
+                                <li>Rollenbasierte Zugriffssteuerung</li>
+                                <li>Audit-Logging</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h2>Systemarchitektur</h2>
+                    <ul class="architecture-points">
+                        <li>
+                            <strong>Microservices:</strong>
+                            Modulare Architektur mit spezialisierten Services für Storage und IMAP
+                        </li>
+                        <li>
+                            <strong>Job Management:</strong>
+                            Robustes System für asynchrone Aufgabenverarbeitung mit Fortschrittsverfolgung
+                        </li>
+                        <li>
+                            <strong>Skalierbarkeit:</strong>
+                            Horizontale Skalierung durch Container-Orchestrierung
+                        </li>
+                        <li>
+                            <strong>Monitoring:</strong>
+                            Umfassende Überwachung mit CloudWatch und eigenen Metriken
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h2>Besondere Herausforderungen</h2>
+                    <div class="challenges">
+                        <ul>
+                            <li>
+                                <strong>Datensicherheit:</strong>
+                                Implementierung von End-to-End-Verschlüsselung und sicherer Dateiübertragung
+                            </li>
+                            <li>
+                                <strong>Performance:</strong>
+                                Optimierung der Datentransfergeschwindigkeit und Ressourcennutzung
+                            </li>
+                            <li>
+                                <strong>Zuverlässigkeit:</strong>
+                                Entwicklung robuster Wiederaufnahme- und Fehlerbehandlungsmechanismen
+                            </li>
+                            <li>
+                                <strong>Multi-Tenancy:</strong>
+                                Sichere Mandantentrennung und effiziente Ressourcenverteilung
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Theme beim Laden wiederherstellen
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Andreas Höfler | <a href="impressum.html" style="color: white; text-decoration: none;">Impressum</a></p>
+        </div>
+    </footer>
+</body>
+</html>

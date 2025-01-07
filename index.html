@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andreas Höfler - Full-Stack Entwickler Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-sun sun"></i>
+        <i class="fas fa-moon moon"></i>
+    </button>
+
+    <header>
+        <nav>
+            <div class="nav-content">
+                <a href="#home">Home</a>
+                <a href="#projects">Projekte</a>
+                <a href="#skills">Skills</a>
+                <a href="https://webdesign.or.at/" target="_blank">Webdesign</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <!-- Platzhalter für Ihr Profilbild -->
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-info" data-aos="fade-up">
+                        <h1>Andreas Höfler</h1>
+                        <h2>Full-Stack Entwickler</h2>
+                        <p>Spezialisiert auf Cloud-native Anwendungen und Microservices</p>
+                        <div class="social-links">
+                            <a href="https://github.com/andreashoefler1985" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/andreas-höfler" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://webdesign.or.at" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projekte</h2>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3>DNS Management System</h3>
+                        <div class="project-tech">
+                            <span>TypeScript</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
+                        </div>
+                        <p>Ein umfassendes DNS-Management-System mit AWS-Infrastruktur, das Hochverfügbarkeit und Skalierbarkeit bietet.</p>
+                        <ul class="project-features">
+                            <li>Multi-AZ Architektur</li>
+                            <li>Container-basierte Microservices</li>
+                            <li>Automatisierte CI/CD Pipeline</li>
+                            <li>Umfangreiches Monitoring</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="dns-management.html" class="btn">Details</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Synkross</h3>
+                        <div class="project-tech">
+                            <span>TypeScript</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
+                        </div>
+                        <p>Eine SaaS-Lösung für Cloud-Storage-Synchronisation und IMAP-Migration mit fortschrittlichem Job-Management.</p>
+                        <ul class="project-features">
+                            <li>Multi-Cloud Support</li>
+                            <li>Rollenbasierte Zugriffskontrolle</li>
+                            <li>Echtzeit-Fortschrittsverfolgung</li>
+                            <li>Skalierbare AWS-Infrastruktur</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="synkross.html" class="btn">Details</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Technische Fähigkeiten</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>HTML5/CSS3</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>PostgreSQL</li>
+                            <li>RESTful APIs</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>DevOps</h3>
+                        <ul>
+                            <li>AWS</li>
+                            <li>Docker</li>
+                            <li>CI/CD</li>
+                            <li>Terraform</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+                <h2>Kontakt</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:office@webdesign.or.at">info@hoefler-it.at</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>St. Marienkirchen, Österreich</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialisiere AOS Animationen
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Dark Mode Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Theme beim Laden wiederherstellen
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Andreas Höfler | <a href="impressum.html" style="color: white; text-decoration: none;">Impressum</a></p>
+        </div>
+    </footer>
+</body>
+</html>
